@@ -1,0 +1,15 @@
+s21-08-n-data/
+├── data/               # Scripts y archivos relacionados con los datos
+│   ├── raw/            # Datos originales sin procesar
+│   └── processed/      # Datos procesados y listos para usar
+├── notebooks/          # Jupiter notebooks para exploraciones
+├── src/                # Código fuente del proyecto
+│   ├── models/         # Código relacionado al modelo de ML (entrenamiento, evaluación)
+│   ├── utils/          # Funciones y scripts auxiliares
+├── results/            # Resultados del dashboards y modelos
+│   ├── figures/        # Imagenes relacionadas a la app
+│   └── forecasts/      # Predicciones realizadas con los modelos 
+├── tests/              # Pruebas unitarias y de integración
+├── .gitignore          # Archivos y carpetas a ignorar en Git
+├── README.md           # Descripción y guía del proyecto
+└── requirements.txt    # Dependencias del proyecto
