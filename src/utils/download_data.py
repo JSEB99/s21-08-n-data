@@ -18,10 +18,12 @@ DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?options=-
 
 engine = create_engine(DATABASE_URL)
 
+tabla = input("Digita la tabla que buscas: ")
+
 try:
     print("Conectando a la base de datos...")
-    query = "SELECT * FROM order_facts"  # Consulta completa
-    output_file = "../../data/processed/order_facts.csv"
+    query = f"SELECT * FROM {tabla}"  # Consulta completa
+    output_file = f"../../data/processed/{tabla}.csv"
     chunksize = 10000  # Procesar en bloques de 10,000 filas
 
     # Exportar por bloques
