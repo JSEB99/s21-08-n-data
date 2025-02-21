@@ -21,7 +21,7 @@ engine = create_engine(DATABASE_URL)
 try:
     print("Conectando a la base de datos...")
     query = "SELECT * FROM order_facts"  # Consulta completa
-    output_file = "../../data/order_facts.csv"
+    output_file = "../../data/processed/order_facts.csv"
     chunksize = 10000  # Procesar en bloques de 10,000 filas
 
     # Exportar por bloques
