@@ -1,0 +1,8 @@
+[client]
+showSidebarNavigation = false
+[theme]
+primaryColor="rgb(255, 189, 69)"
+backgroundColor="rgb(7, 0, 36)"
+secondaryBackgroundColor="rgb(11, 1, 53)"
+textColor="rgb(255, 250, 242)"
+font="Source Sans Pro"
