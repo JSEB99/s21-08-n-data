@@ -1,0 +1,119 @@
+product_dim_id,product_id,product_name,product_price,category_id,department_id
+1,19,Nike Men's Fingertrap Max Training Shoe,124.99,18,4
+2,24,Elevation Training Mask 2.0,79.99,18,4
+3,35,adidas Brazuca 2014 Official Match Ball,159.99,41,4
+4,37,adidas Kids' F5 Messi FG Soccer Cleat,34.99,41,4
+5,44,adidas Men's F10 Messi TRX FG Soccer Cleat,59.99,41,4
+6,58,Diamondback Boys' Insight 24 Performance Hybr,299.99,32,4
+7,60,SOLE E25 Elliptical,999.99,32,4
+8,61,Diamondback Girls' Clarity 24 Hybrid Bike 201,299.99,32,4
+9,78,Nike Kids' Grade School KD VI Basketball Shoe,99.99,3,4
+10,93,Under Armour Men's Tech II T-Shirt,24.99,3,4
+11,116,Nike Men's Comfort 2 Slide,44.99,39,4
+12,127,Stiga Master Series ST3100 Competition Indoor,329.99,15,4
+13,134,Nike Women's Legend V-Neck T-Shirt,25.00,15,4
+14,135,Nike Dri-FIT Crew Sock 6 Pack,22.00,15,4
+15,172,Nike Women's Tempo Shorts,30.00,44,5
+16,191,Nike Men's Free 5.0+ Running Shoe,99.99,44,5
+17,203,GoPro HERO3+ Black Edition Camera,399.99,7,5
+18,208,SOLE E35 Elliptical,1999.99,7,5
+19,216,Yakima DoubleDown Ace Hitch Mount 4-Bike Rack,189.00,7,5
+20,226,Bowflex SelectTech 1090 Dumbbells,599.99,28,5
+21,235,Under Armour Hustle Storm Medium Duffle Bag,34.99,28,5
+22,249,Under Armour Women's Micro G Skulpt Running S,54.97,26,5
+23,251,Brooks Women's Ghost 6 Running Shoe,89.99,26,5
+24,258,Nike Women's Free 5.0 TR FIT PRT 4 Training S,94.99,26,5
+25,273,Under Armour Kids' Mercenary Slide,27.99,4,5
+26,276,Under Armour Women's Ignite Slide,31.99,4,5
+27,278,Under Armour Men's Compression EV SL Slide,44.99,4,5
+28,282,Under Armour Women's Ignite PIP VI Slide,31.99,4,5
+29,295,Fitbit The One Wireless Activity & Sleep Trac,99.95,21,11
+30,303,Garmin Forerunner 910XT GPS Watch,399.99,21,11
+31,305,Mio ALPHA Heart Rate Monitor/Sport Watch,199.00,21,11
+32,306,Polar FT4 Heart Rate Monitor,89.99,21,11
+33,311,Polar Loop Activity Tracker,109.95,21,11
+34,359,Nike Men's Free TR 5.0 TB Training Shoe,99.99,9,5
+35,364,Total Gym 1400,299.99,30,8
+36,365,Perfect Fitness Perfect Rip Deck,59.99,30,8
+37,403,Nike Men's CJ Elite 2 TD Football Cleat,129.99,12,8
+38,502,Nike Men's Dri-FIT Victory Golf Polo,50.00,50,10
+39,564,Nike Men's Deutschland Weltmeister Winners Bl,30.00,8,10
+40,565,adidas Youth Germany Black/Red Away Match Soc,70.00,8,10
+41,567,adidas Men's Germany Black Crest Away Tee,25.00,8,10
+42,572,TYR Boys' Team Digi Jammer,39.99,8,10
+43,607,Garmin Approach S3 Golf GPS Watch,249.99,5,11
+44,625,Nike Men's Kobe IX Elite Low Basketball Shoe,199.99,35,10
+45,627,Under Armour Girls' Toddler Spine Surge Runni,39.99,35,10
+46,642,Columbia Men's PFG Anchor Tough T-Shirt,30.00,35,10
+47,646,Merrell Women's Grassbow Sport Hiking Shoe,99.99,31,11
+48,647,Merrell Women's Siren Mid Waterproof Hiking B,134.99,31,11
+49,652,Merrell Women's Grassbow Sport Waterproof Hik,129.99,31,11
+50,666,Merrell Men's All Out Flash Trail Running Sho,109.99,31,11
+51,671,Cleveland Golf Collegiate My Custom Wedge 588,209.99,17,11
+52,677,TaylorMade White Smoke IN-12 Putter,99.99,17,11
+53,691,MDGolf Pittsburgh Penguins Putter,79.99,17,11
+54,703,Top Flite Women's 2014 XL Hybrid,19.99,48,11
+55,705,Cleveland Golf Women's 588 RTX CB Satin Chrom,119.99,48,11
+56,715,TaylorMade Women's RBZ SL Rescue,129.99,48,11
+57,724,LIJA Women's Mid-Length Panel Golf Shorts,100.00,19,11
+58,725,LIJA Women's Button Golf Dress,108.00,19,11
+59,728,LIJA Women's Eyelet Sleeveless Golf Polo,65.00,19,11
+60,730,LIJA Women's Argyle Golf Polo,80.00,19,11
+61,743,Ogio Race Golf Shoes,169.99,25,11
+62,768,Titleist Club Glove Travel Cover,299.99,23,11
+63,771,Clicgear Rovic Cooler Bag,39.99,23,11
+64,773,Titleist Small Wheeled Travel Cover,249.99,23,11
+65,775,Clicgear 8.0 Shoe Brush,9.99,23,11
+66,777,Bag Boy M330 Push Cart,79.99,23,11
+67,778,Bag Boy Beverage Holder,24.99,23,11
+68,786,TaylorMade 2014 Purelite Stand Bag,179.99,23,11
+69,792,Hirzl Men's Hybrid Golf Glove,14.99,49,11
+70,793,Hirzl Women's Hybrid Golf Glove,14.99,49,11
+71,797,Hirzl Women's Soffft Flex Golf Glove,17.99,49,11
+72,804,Glove It Women's Imperial Golf Glove,19.99,49,11
+73,810,Glove It Women's Mod Oval Golf Glove,19.99,49,11
+74,818,Titleist Pro V1x Golf Balls,47.99,4,11
+75,821,Titleist Pro V1 High Numbers Personalized Gol,51.99,4,11
+76,822,Titleist Pro V1x High Numbers Golf Balls,47.99,4,11
+77,823,Titleist Pro V1x High Numbers Personalized Go,51.99,4,11
+78,825,Bridgestone e6 Straight Distance NFL Tennesse,31.99,4,11
+79,828,Bridgestone e6 Straight Distance NFL San Dieg,31.99,4,11
+80,835,Bridgestone e6 Straight Distance NFL Carolina,31.99,4,11
+81,845,Garmin Approach S4 Golf GPS Watch,299.99,21,11
+82,858,GolfBuddy VT3 GPS Watch,199.99,21,11
+83,860,Bushnell Pro X7 Jolt Slope Rangefinder,599.99,21,11
+84,885,Team Golf St. Louis Cardinals Putter Grip,24.99,13,11
+85,886,Team Golf San Francisco Giants Putter Grip,24.99,13,11
+86,893,Team Golf Pittsburgh Steelers Putter Grip,24.99,13,11
+87,897,Team Golf New England Patriots Putter Grip,24.99,13,11
+88,905,Team Golf Texas Longhorns Putter Grip,24.99,13,11
+89,906,Team Golf Tennessee Volunteers Putter Grip,24.99,13,11
+90,917,Glove It Women's Mod Oval 3-Zip Carry All Gol,21.99,5,11
+91,924,Glove It Urban Brick Golf Towel,15.99,5,11
+92,926,Glove It Imperial Golf Towel,15.99,5,11
+93,957,Diamondback Women's Serene Classic Comfort Bi,299.98,22,9
+94,977,ENO Atlas Hammock Straps,29.99,11,9
+95,981,The North Face Women's Recon Backpack,99.00,11,9
+96,982,insta-bed Neverflat Air Mattress,149.99,11,9
+97,1004,Field & Stream Sportsman 16 Gun Fire Safe,399.98,47,9
+98,1014,O'Brien Men's Neoprene Life Vest,49.98,46,9
+99,1059,Pelican Maverick 100X Kayak,349.99,38,9
+100,1073,Pelican Sunstream 100 Kayak,199.99,38,9
+101,1346,Sports Books ,31.08,43,7
+102,1347,Baby sweater,59.08,27,8
+103,1348,CDs of rock,11.29,20,1
+104,1349,Web Camera,452.04,40,2
+105,1350,Children's heaters,357.10,45,8
+106,1351,Dell Laptop,1500.00,1,2
+107,1352,Industrial consumer electronics,252.88,14,2
+108,1353,Porcelain crafts,461.48,34,8
+109,1354,DVDs ,164.38,42,1
+110,1355,Lawn mower,532.58,37,11
+111,1356,First aid kit,293.04,24,6
+112,1357,Men's gala suit,210.85,33,8
+113,1358,Rock music,260.65,6,1
+114,1359,Adult dog supplies,84.40,29,3
+115,1360,Smart watch ,327.75,16,4
+116,1361,Toys ,11.54,36,9
+117,1362,Fighting video games,39.75,2,1
+118,1363,Summer dresses,215.82,10,8
