@@ -2,6 +2,8 @@ import streamlit as st
 import utils.sidebar as sb
 import pickle
 import numpy as np
+import pandas as pd
+import joblib
 
 st.set_page_config(
     page_title="SupplyRisk - Prediction",
@@ -389,19 +391,45 @@ with st.form("shipping_form"):
     order_payment_type = st.selectbox(
         "Payment Method", ["CASH", "DEBIT", "PAYMENT", "TRANSFER"])
 
+    input_data = {
+        'order_shipping_mode': [shipping_mode],
+        'date_hour': [order_hour],
+        'customer_store_city': [customer_store_city],
+        'order_country': [order_country],
+        'date_month': [date_month],
+        'date_weekday': [date_weekday],
+        'order_payment_type':[order_payment_type]
+    }
+
+    X = pd.DataFrame(input_data)
+
+
     # Botón de envío
     submitted = st.form_submit_button("Enviar")
 
     if submitted:
         st.markdown("Aqui")
-        # model_path = "models/shipping_model.pkl"
-        # with open(model_path, "rb") as model_file:
+        #model_path = "src/models/model_deploy.pkl"
+        #with open(model_path, "rb") as model_file:
         #    model = pickle.load(model_file)
+        model = joblib.load("src/models/model_deploy.pkl")
         #
-        #    # Preparar los datos de entrada
+            # Preparar los datos de entrada
         #    input_data = np.array([[date_month]])  # Adaptar según características
-        #   prediction = model.predict(input_data)
+        input_data = {
+            'order_shipping_mode': [shipping_mode],
+            'date_hour': [order_hour],
+            'customer_store_city': [customer_store_city],
+            'order_country': [order_country],
+            'customer_store_state': [customer_store_state],
+            'date_month': [date_month],
+            'date_weekday': [date_weekday],
+            'order_payment_type':[order_payment_type]
+        }
+        X = pd.DataFrame(input_data)
+        prediction = model.predict(X)
 
-        #    st.write(f"### Predicción del modelo: {prediction[0]}")
+        st.write(f"### Predicción del modelo: {prediction[0]}")
+
     else:
         st.error("El modelo no fue encontrado en la ruta especificada.")
