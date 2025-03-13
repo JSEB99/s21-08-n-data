@@ -2,14 +2,13 @@ import streamlit as st
 import utils.sidebar as sb
 
 DESCRIPTION = """
-Este proyecto tiene como objetivo **analizar y predecir el riesgo de retraso en los envíos** dentro de una cadena de suministro global. *Se trabaja con un dataset que contiene información sobre órdenes realizadas por compradores en Estados Unidos*, con envíos provenientes de distintos puntos del mundo. Se busca **identificar patrones en los retrasos y estimar el tiempo adicional** que un pedido podría tardar en llegar si se considera tardío.
+Este proyecto tiene como objetivo **analizar y predecir el riesgo de retraso en los envíos** dentro de una cadena de suministro global. *Se trabaja con un dataset que contiene información sobre órdenes realizadas por vendedores en Estados Unidos*, con envíos a distintos puntos del mundo. Se busca **identificar patrones en los retrasos y estimar el tiempo adicional** que un pedido podría tardar en llegar si se considera tardío.
 
 Para lograrlo, utilizamos `Python` para el procesamiento de datos, análisis exploratorio (*EDA*) y modelado predictivo, junto con `SQL` para la extracción, transformación y análisis de datos en un modelo de base de datos en estrella (*OLAP*).
 """
 
 OBJETIVO = """
 - **Clasificación de envíos tardíos:** Identificar si un pedido será entregado a tiempo o sufrirá un retraso.
-- **Estimación del retraso:** Predecir cuántos días adicionales tomará la entrega en caso de ser tardía.
 - **Análisis de factores de riesgo:** Determinar las variables que más influyen en los retrasos (ubicación del proveedor, tipo de producto, temporada, etc.).
 - **Optimización y alertas:** Proporcionar información útil para optimizar la logística y generar alertas tempranas de riesgo de retraso.
 """
