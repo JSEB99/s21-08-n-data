@@ -23,7 +23,7 @@ sb.show_sidebar()
 st.markdown('<h1 style="background-color: rgb(96, 180, 255); color: white; padding: 5px; border-radius: 5px; text-align: center;">Predictor de riesgo para envíos tardíos en cadenas de suministro</h1>',
             unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
-st.image("./assets/images/port.jpg")
+st.image("./app/assets/images/port.jpg")
 st.subheader(":orange[Descripción]")
 st.markdown(DESCRIPTION)
 st.subheader(":orange[Objetivo]")
