@@ -31,7 +31,7 @@ linkedin.markdown(
     unsafe_allow_html=True)
 
 name.write("Sebastian Mora")
-role.write("Analista de Datos")
+role.write("Ingeniero de Datos")
 github.markdown('[GitHub](https://github.com/JSEB99)')
 linkedin.markdown('[LinkedIn](https://www.linkedin.com/in/jsebastianm/)')
 name.write("Livan Gonzalez")
