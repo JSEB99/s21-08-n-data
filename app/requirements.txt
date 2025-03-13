@@ -4,4 +4,4 @@ SQLAlchemy
 streamlit
 plotly
 joblib
-sklearn
+scikit-learn
