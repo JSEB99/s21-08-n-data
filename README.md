@@ -49,7 +49,9 @@ En un mundo donde las cadenas de suministro globales enfrentan desafíos constan
 El análisis se basa en un dataset con información detallada sobre órdenes realizadas por vendedores en Estados Unidos con destino a múltiples países. A partir de estos datos, *tenemos los siguientes objetivos:*
 
 1️⃣ **Clasificación de envíos tardíos:** Identificar si un pedido será entregado a tiempo o sufrirá un retraso.
+
 2️⃣ **Análisis de factores de riesgo:** Determinar las variables que más influyen en los retrasos (ubicación del proveedor, tipo de producto, temporada, etc.).
+
 3️⃣ **Optimización y alertas:** Proporcionar información útil para optimizar la logística y generar alertas tempranas de riesgo de retraso.
 
 Con estas predicciones, empresas y clientes podrán tomar decisiones informadas, optimizar sus procesos logísticos y reducir los costos asociados a las demoras.
