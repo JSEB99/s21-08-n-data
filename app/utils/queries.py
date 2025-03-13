@@ -155,7 +155,7 @@ with ordenes_con_fechas as (
 select a.date_year , b.order_id from time_dim a inner join order_facts b
 on a.time_dim_id = b.time_shipping_dim_id
 )
-select a.date_year, b.order_status, COUNT(a.date_year) from ordenes_con_fechas a inner join orders_dim b
+select a.date_year, b.order_status AS "Estado de orden", COUNT(a.date_year) from ordenes_con_fechas a inner join orders_dim b
 on a.order_id = b.order_id
 GROUP BY b.order_status,a.date_year
 ORDER BY a.date_year,b.order_status;

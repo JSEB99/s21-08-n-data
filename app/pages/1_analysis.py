@@ -90,7 +90,7 @@ with st.container():
 
     order_status = chart.get_cached_data(query.ESTADO_ORDEN)
     st.bar_chart(order_status, x="date_year", y="count", x_label="Año",
-                 y_label="Cantidad Ordenes", color="order_status")
+                 y_label="Cantidad Ordenes", color="Estado de orden")
 
     st.markdown(
         "### ¿Cómo varía el tiempo de envío real vs. programado según la región o el mercado?")
