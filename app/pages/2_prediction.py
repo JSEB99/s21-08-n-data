@@ -1,13 +1,12 @@
 import streamlit as st
 import utils.sidebar as sb
-import pickle
-import numpy as np
 import pandas as pd
 import joblib
+import time
 
 st.set_page_config(
     page_title="SupplyRisk - Prediction",
-    layout="wide",
+    layout="centered",
     page_icon="🤖")
 
 sb.show_sidebar()
@@ -25,26 +24,9 @@ cities = [
     "Annapolis", "Hanford", "Cerritos", "Norfolk", "Alpharetta", "New Bedford", "Gwynn Oak",
     "Granada Hills", "Littleton", "Westland", "Springfield", "Doylestown", "Glendale",
     "Billings", "Rego Park", "San Ramon", "Fort Worth", "San Pablo", "Alhambra",
-    "San Bernardino",
-    "Campbell",
-    "Washington",
-    "Lynnwood",
-    "Wayne",
-    "West Jordan",
-    "Katy",
-    "Asheboro",
-    "Fremont",
-    "New Haven",
-    "Sanford",
-    "Weslaco",
-    "Modesto",
-    "Cincinnati",
-    "Grand Prairie",
-    "Forest Hills",
-    "Bellingham",
-    "Hamtramck",
-    "Stamford",
-    "Cumberland",
+    "San Bernardino", "Campbell", "Washington", "Lynnwood", "Wayne", "West Jordan",
+    "Katy", "Asheboro", "Fremont", "New Haven", "Sanford", "Weslaco", "Modesto", "Cincinnati",
+    "Grand Prairie", "Forest Hills", "Bellingham", "Hamtramck", "Stamford", "Cumberland",
     "Arecibo",
     "Elyria",
     "Gardena",
@@ -343,7 +325,7 @@ with st.form("shipping_form"):
     ])
 
     # Customer Store City
-    customer_store_city = st.selectbox("Customer Store City", cities)
+    customer_store_city = st.selectbox("Customer Store City", cities, index=0)
 
     # Order Country
     order_country = st.selectbox("Order Country", [
@@ -376,7 +358,7 @@ with st.form("shipping_form"):
         "Michigan", "Minnesota", "Pennsylvania", "Washington", "Montana", "Kentucky", "Wisconsin", "Arizona",
         "Illinois", "Virginia", "Maryland", "Georgia", "Puerto Rico", "Utah", "North Dakota", "California",
         "Tennessee", "Kansas", "Oregon", "Texas", "Idaho", "Alabama"
-    ])
+    ], index=32)
 
     #
     order_hour = st.selectbox("Order Hour", hours)
@@ -398,24 +380,16 @@ with st.form("shipping_form"):
         'order_country': [order_country],
         'date_month': [date_month],
         'date_weekday': [date_weekday],
-        'order_payment_type':[order_payment_type]
+        'order_payment_type': [order_payment_type]
     }
 
     X = pd.DataFrame(input_data)
-
 
     # Botón de envío
     submitted = st.form_submit_button("Enviar")
 
     if submitted:
-        st.markdown("Aqui")
-        #model_path = "src/models/model_deploy.pkl"
-        #with open(model_path, "rb") as model_file:
-        #    model = pickle.load(model_file)
-        model = joblib.load("src/models/model_deploy.pkl")
-        #
-            # Preparar los datos de entrada
-        #    input_data = np.array([[date_month]])  # Adaptar según características
+        model = joblib.load("../src/models/model_deploy.pkl")
         input_data = {
             'order_shipping_mode': [shipping_mode],
             'date_hour': [order_hour],
@@ -424,12 +398,15 @@ with st.form("shipping_form"):
             'customer_store_state': [customer_store_state],
             'date_month': [date_month],
             'date_weekday': [date_weekday],
-            'order_payment_type':[order_payment_type]
+            'order_payment_type': [order_payment_type]
         }
         X = pd.DataFrame(input_data)
-        prediction = model.predict(X)
-
-        st.write(f"### Predicción del modelo: {prediction[0]}")
-
-    else:
-        st.error("El modelo no fue encontrado en la ruta especificada.")
+        with st.spinner("Procesando la predicción..."):
+            time.sleep(2)
+            prediction = model.predict(X)
+            if prediction[0] == 1:
+                st.markdown(
+                    "### Predicción del modelo: :red[Alto riesgo entrega tardía]")
+            else:
+                st.markdown(
+                    "### Predicción del modelo: :green[Sin riesgo entrega tardía]")

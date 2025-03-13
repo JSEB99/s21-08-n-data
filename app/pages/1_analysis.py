@@ -56,6 +56,43 @@ with st.container():
     st.plotly_chart(fig_top10)
 
     st.markdown(
+        '### ¿Qué variables tienen mayor peso para determinar el tiempo máximo de entrega?')
+
+    impact_variables = chart.get_cached_data(query.VARIABLES_IMPACT)
+
+    max_variable = impact_variables["cuenta"].max()
+    colors_var = [BAR_COLOR1 if variable ==
+                  max_variable else BAR_COLOR2 for variable in impact_variables["cuenta"]]
+    fig_variables = px.bar(impact_variables, x="order_days_for_shipment_scheduled", y="cuenta", labels={
+        'order_days_for_shipment_scheduled': 'Días programados', 'cuenta': 'Cantidad de ordenes'})
+    fig_variables.update_traces(marker=dict(color=colors_var))
+    fig_variables.update_xaxes(type="category")
+    avg_delay = impact_variables["cuenta"].mean()
+
+    fig_variables.add_shape(
+        type="line",
+        # Extiende la línea a través de todas las barras
+        x0=-0.5, x1=len(impact_variables) - 0.5,
+        y0=avg_delay, y1=avg_delay,  # Altura de la línea
+        # Configuración de la línea
+        line=dict(color=LINE_COLOR, width=2, dash="dash"),
+    )
+
+    fig_variables.add_annotation(
+        x=len(impact_variables)-2,
+        y=avg_delay + 5000,  # Un poco arriba de la línea
+        text=f"Orden promedio: {avg_delay:.1f}",
+        showarrow=False,  # No mostrar la flecha
+        font=dict(size=12, color=LINE_COLOR)
+    )
+
+    st.plotly_chart(fig_variables)
+
+    order_status = chart.get_cached_data(query.ESTADO_ORDEN)
+    st.bar_chart(order_status, x="date_year", y="count", x_label="Año",
+                 y_label="Cantidad Ordenes", color="order_status")
+
+    st.markdown(
         "### ¿Cómo varía el tiempo de envío real vs. programado según la región o el mercado?")
     region, market = st.tabs(["Region", "Mercado"])
 
@@ -143,43 +180,6 @@ with st.container():
         st.markdown("<br>", unsafe_allow_html=True)
         st.bar_chart(delay_customer_orders, x="category", y="percentage", x_label="% Continuan comprando",
                      y_label="Porcentaje %", color=BAR_COLOR1)
-
-    st.markdown(
-        '### ¿Qué variables tienen mayor peso para determinar el tiempo máximo de entrega?')
-
-    impact_variables = chart.get_cached_data(query.VARIABLES_IMPACT)
-
-    max_variable = impact_variables["cuenta"].max()
-    colors_var = [BAR_COLOR1 if variable ==
-                  max_variable else BAR_COLOR2 for variable in impact_variables["cuenta"]]
-    fig_variables = px.bar(impact_variables, x="order_days_for_shipment_scheduled", y="cuenta", labels={
-        'order_days_for_shipment_scheduled': 'Días programados', 'cuenta': 'Cantidad de ordenes'})
-    fig_variables.update_traces(marker=dict(color=colors_var))
-    fig_variables.update_xaxes(type="category")
-    avg_delay = impact_variables["cuenta"].mean()
-
-    fig_variables.add_shape(
-        type="line",
-        # Extiende la línea a través de todas las barras
-        x0=-0.5, x1=len(impact_variables) - 0.5,
-        y0=avg_delay, y1=avg_delay,  # Altura de la línea
-        # Configuración de la línea
-        line=dict(color=LINE_COLOR, width=2, dash="dash"),
-    )
-
-    fig_variables.add_annotation(
-        x=len(impact_variables)-2,
-        y=avg_delay + 5000,  # Un poco arriba de la línea
-        text=f"Orden promedio: {avg_delay:.1f}",
-        showarrow=False,  # No mostrar la flecha
-        font=dict(size=12, color=LINE_COLOR)
-    )
-
-    st.plotly_chart(fig_variables)
-
-    order_status = chart.get_cached_data(query.ESTADO_ORDEN)
-    st.bar_chart(order_status, x="date_year", y="count", x_label="Año",
-                 y_label="Cantidad Ordenes", color="order_status")
 
 with st.container():
     st.markdown("## :orange[2. Optimización del proceso logístico] 📦")
