@@ -6,7 +6,9 @@
 
 <hr></hr>
 
-#### [Demo Video 📽️](https://youtu.be/MP54oDOi87g)
+#### Demo Video 📽️
+
+<a href="https://youtu.be/MP54oDOi87g" target="_blank">YouTube Demo</a>
 
 #### Integrantes
 
